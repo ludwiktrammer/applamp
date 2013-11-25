@@ -7,6 +7,8 @@ Examples
 --------
 Controlling white light bulbs:
 
+.. code:: python
+
     from applight import WhiteLight
 
     light = WhiteLight()
@@ -18,8 +20,10 @@ Controlling white light bulbs:
 
 Controlling RGB light bulbs:
 
-    from applight import ColorLight
+.. code:: python
 
+    from applight import ColorLight
+    
     light = ColorLight()
     light.fade_in()
     light.hue(100)  # changing color
