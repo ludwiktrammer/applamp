@@ -13,7 +13,7 @@ Installation
 
     sudo python setup.py install
 
-Examples
+Examples & Documentation
 --------
 Controlling white light bulbs:
 
@@ -39,6 +39,9 @@ Controlling RGB light bulbs:
     light.hue(100)  # changing color
     light.next_effect()
 
+
+You can see a list of all methods and their descriptions in
+`the reference documentation <http://applamp-python-api.readthedocs.org/>`_.
 
 Disclaimer
 ----------
