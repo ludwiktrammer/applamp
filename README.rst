@@ -3,6 +3,16 @@ AppLamp Python API
 
 `AppLamp Python API <https://github.com/ludwiktrammer/applamp>`_ is a library for controlling `AppLight <http://www.wifiledlamp.com/service/about/>`_ lighting from your Python code.
 
+Installation
+------------
+* Install using `pip <http://www.pip-installer.org/>`_::
+
+    sudo pip install applamp
+
+* Or download the repository and install with `setup.py`::
+
+    sudo python setup.py install
+
 Examples
 --------
 Controlling white light bulbs:

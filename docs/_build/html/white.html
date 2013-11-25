@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>White Lights &mdash; AppLamp Python API 0.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="AppLamp Python API 0.2 documentation" href="index.html" />
+    <link rel="next" title="RGB Lights" href="rgb.html" />
+    <link rel="prev" title="AppLamp Python API" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="rgb.html" title="RGB Lights"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="AppLamp Python API"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">AppLamp Python API 0.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="white-lights">
+<h1>White Lights<a class="headerlink" href="#white-lights" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="applamp.WhiteLight">
+<em class="property">class </em><tt class="descclassname">applamp.</tt><tt class="descname">WhiteLight</tt><big>(</big><em>ip='192.168.1.100'</em>, <em>port=50000</em><big>)</big><a class="headerlink" href="#applamp.WhiteLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an object for controlling white AppLamp light bulbs.
+Optional attributes <cite>ip</cite> and <cite>port</cite> allow for a custom AppLamp Wifi Box setup.
+By default those values are <cite>192.168.1.100</cite> and <cite>50000</cite>.</p>
+<p>White AppLamp bulbs have a &#8220;group&#8221; future, allowing for partitioning of light sources
+into multiple groups. Most methods of this class supports this feature via an optional
+<cite>group</cite> attribute. The default value of <cite>0</cite> means the method will be applied to all
+light sources in all groups. Values between 1 and 4 will be interpreted as group
+numbers, and the method will be applied only to light sources within a given group.</p>
+<dl class="method">
+<dt id="applamp.WhiteLight.bright_down">
+<tt class="descname">bright_down</tt><big>(</big><big>)</big><a class="headerlink" href="#applamp.WhiteLight.bright_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the light less bright.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.bright_up">
+<tt class="descname">bright_up</tt><big>(</big><big>)</big><a class="headerlink" href="#applamp.WhiteLight.bright_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the light brighter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.cooler">
+<tt class="descname">cooler</tt><big>(</big><big>)</big><a class="headerlink" href="#applamp.WhiteLight.cooler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the light less warm.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.fade_in">
+<tt class="descname">fade_in</tt><big>(</big><em>duration=3</em>, <em>group=0</em><big>)</big><a class="headerlink" href="#applamp.WhiteLight.fade_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns on the light be gradually fading it in.
+The optional <cite>duration</cite> parameter allows for control
+of the fade in duration (in seconds)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.fade_out">
+<tt class="descname">fade_out</tt><big>(</big><em>duration=3</em>, <em>group=0</em><big>)</big><a class="headerlink" href="#applamp.WhiteLight.fade_out" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns off the light be gradually fading it out.
+The optional <cite>duration</cite> parameter allows for control
+of the fade out duration (in seconds)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.night_mode">
+<tt class="descname">night_mode</tt><big>(</big><em>group=0</em><big>)</big><a class="headerlink" href="#applamp.WhiteLight.night_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switches the lights into night mode (very low brightness).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.off">
+<tt class="descname">off</tt><big>(</big><em>group=0</em><big>)</big><a class="headerlink" href="#applamp.WhiteLight.off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns the lights off.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.on">
+<tt class="descname">on</tt><big>(</big><em>group=0</em><big>)</big><a class="headerlink" href="#applamp.WhiteLight.on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns the lights on.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applamp.WhiteLight.warmer">
+<tt class="descname">warmer</tt><big>(</big><big>)</big><a class="headerlink" href="#applamp.WhiteLight.warmer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the light warmer.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">AppLamp Python API</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="rgb.html"
+                        title="next chapter">RGB Lights</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/white.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="rgb.html" title="RGB Lights"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="AppLamp Python API"
+             >previous</a> |</li>
+        <li><a href="index.html">AppLamp Python API 0.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Ludwik Trammer.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
