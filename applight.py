@@ -12,13 +12,13 @@ class AbstractLight(object):
         self.socket.sendto(data, self.address)
 
     def fade_out(self, duration=3):
-        step_duration = duration/11.0
+        step_duration = duration / 11.0
         for i in range(10):
             self.bright_down()
             time.sleep(step_duration)
 
     def fade_in(self, duration=3):
-        step_duration = duration/11.0
+        step_duration = duration / 11.0
         for i in range(10):
             time.sleep(step_duration)
             self.bright_up()
@@ -30,7 +30,7 @@ class WhiteLight(AbstractLight):
             self.send_command(options[group])
         except KeyError:
             raise ValueError(
-                "Group must be a value between 0 and %d" % len(options)-1
+                "Group must be a value between 0 and %d" % len(options) - 1
             )
 
     def on(self, group=0):
