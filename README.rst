@@ -15,7 +15,7 @@ Controlling white light bulbs:
     light.on()
     light.warmer()
     light.fade_out()
-    light.night_mode(group=2)
+    light.night_mode(group=1)
 
 
 Controlling RGB light bulbs:
@@ -23,9 +23,13 @@ Controlling RGB light bulbs:
 .. code:: python
 
     from applight import ColorLight
-    
+
     light = ColorLight()
     light.fade_in()
     light.hue(100)  # changing color
     light.next_effect()
-    light.off()
+
+
+Disclaimer
+----------
+I'm not affiliated with `AppLamp <http://www.wifiledlamp.com/service/about/>`_ in any way. This project is not endorsed, supported or funded by the company. They are probably really cool guys, but I don't know them. "AppLamp" is most likely a registered trademark belonging to the company.
