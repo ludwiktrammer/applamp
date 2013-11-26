@@ -34,7 +34,7 @@ class WhiteLight(AbstractLight):
     into multiple groups. Most methods of this class supports this feature via an optional
     `group` attribute. The default value of `0` means the method will be applied to all
     light sources in all groups. Values between 1 and 4 will be interpreted as group
-    numbers, and the method will be applied only to light sources within a given group.
+    identifiers, and the method will be applied only to light sources within a given group.
     """
     def _choose_group(self, options, group):
         try:
@@ -73,7 +73,7 @@ class WhiteLight(AbstractLight):
         self.send_command(63)
 
     def fade_out(self, duration=3, group=0):
-        """Turns off the light be gradually fading it out.
+        """Turns off the light by gradually fading it out.
         The optional `duration` parameter allows for control
         of the fade out duration (in seconds)"""
         self.on(group)
@@ -81,7 +81,7 @@ class WhiteLight(AbstractLight):
         self.off(group)
 
     def fade_in(self, duration=3, group=0):
-        """Turns on the light be gradually fading it in.
+        """Turns on the light by gradually fading it in.
         The optional `duration` parameter allows for control
         of the fade in duration (in seconds)"""
         self.on(group)
@@ -136,14 +136,14 @@ class ColorLight(AbstractLight):
         self.send_command(38)
 
     def fade_out(self, duration=3, group=0):
-        """Turns off the light be gradually fading it out.
+        """Turns off the light by gradually fading it out.
         The optional `duration` parameter allows for control
         of the fade out duration (in seconds)"""
         super(ColorLight, self).fade_out(duration)
         self.off()
 
     def fade_in(self, duration=3, group=0):
-        """Turns on the light be gradually fading it in.
+        """Turns on the light by gradually fading it in.
         The optional `duration` parameter allows for control
         of the fade in duration (in seconds)"""
         self.on()
