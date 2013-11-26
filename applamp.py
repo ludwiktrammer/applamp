@@ -56,20 +56,28 @@ class WhiteLight(AbstractLight):
         """Switches the lights into night mode (very low brightness)."""
         self._choose_group([185, 187, 179, 186, 182], group)
 
-    def bright_up(self):
+    def bright_up(self, group=0):
         """Makes the light brighter."""
+        if group != 0:
+            self.on(group)
         self.send_command(60)
 
-    def bright_down(self):
+    def bright_down(self, group=0):
         """Makes the light less bright."""
+        if group != 0:
+            self.on(group)
         self.send_command(52)
 
-    def warmer(self):
+    def warmer(self, group=0):
         """Makes the light warmer."""
+        if group != 0:
+            self.on(group)
         self.send_command(62)
 
-    def cooler(self):
+    def cooler(self, group=0):
         """Makes the light less warm."""
+        if group != 0:
+            self.on(group)
         self.send_command(63)
 
     def fade_out(self, duration=3, group=0):
