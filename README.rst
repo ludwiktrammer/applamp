@@ -32,9 +32,9 @@ Controlling RGB light bulbs:
 
 .. code:: python
 
-    from applight import ColorLight
+    from applight import RgbLight
 
-    light = ColorLight()
+    light = RgbLight()
     light.fade_in()
     light.hue(100)  # changing color
     light.next_effect()

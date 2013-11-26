@@ -1,4 +1,4 @@
 RGB Lights
 ============
-.. autoclass:: applamp.ColorLight
+.. autoclass:: applamp.RgbLight
    :members:
