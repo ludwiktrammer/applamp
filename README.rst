@@ -1,7 +1,7 @@
 AppLamp Python API
 ==================
 
-`AppLamp Python API <https://github.com/ludwiktrammer/applamp>`_ is a library for controlling `AppLamp <http://www.wifiledlamp.com/service/about/>`_ lighting from your Python code.
+`AppLamp Python API <https://github.com/ludwiktrammer/applamp>`_ is a library for controlling `AppLamp <http://www.wifiledlamp.com>`_ lighting from your Python code.
 
 Installation
 ------------
