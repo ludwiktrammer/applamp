@@ -19,7 +19,7 @@ Controlling white light bulbs:
 
 .. code:: python
 
-    from applight import WhiteLight
+    from applamp import WhiteLight
 
     light = WhiteLight()
     light.on()
@@ -32,7 +32,7 @@ Controlling RGB light bulbs:
 
 .. code:: python
 
-    from applight import RgbLight
+    from applamp import RgbLight
 
     light = RgbLight()
     light.fade_in()
